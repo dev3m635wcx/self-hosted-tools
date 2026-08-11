@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  gitea:
+    image: gitea/gitea:latest
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./gitea:/data
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    ports:
+      - '3001:3001'
